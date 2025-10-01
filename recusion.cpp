@@ -1,19 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int fact(int n)
 {
-    int size = 5;
-    int arr[size] = {3, 11, 7, 2, 5};
-    int min = arr[0];
-
-    for (int i = 0; i < size; i++)
+    if (n == 0)
     {
-        if (min > arr[i])
-        {
-            min = arr[i];
-        }
+        return 1;
     }
 
-    cout << min << " " << "is the minimum value";
+    return n * fact(n - 1);
+}
+
+int main()
+{
+    cout << "Factorial of 5 : " << fact(5);
+    return 0;
 }
